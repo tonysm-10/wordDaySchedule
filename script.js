@@ -22,9 +22,49 @@ $(function () {
   // TODO: Add code to display the current date in the header of the page.
 });
 
+
+
+
+
+
+
+var myTextArea = $('#textarea')
+
+var saveBtn = $('.saveBtn')
+
+
+
+
+
+
+var hour9 = $('#hour-9')
+var hour10 = $('#hour-10')
+var hour11 = $('#hour-11')
+var hour12 = $('#hour-12')
+var hour1 = $('#hour-1')
+var hour2 = $('#hour-2')
+var hour3 = $('#hour-3')
+var hour4 = $('#hour-4')
+var hour5 = $('#hour-5')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                             //  HEADING TIME
 var time = $('#currentDay')
-console.log(time)
 var today = dayjs()
 time.text(dayjs().format('MMM DD, YYYY'))
 var clockElement = document.getElementById( "clock" );
@@ -35,3 +75,124 @@ setInterval(function () {
     updateClock( clockElement );
 }, 1000);
  
+
+////////////////////// PAST PRESENT AND FUTURE///////////////////////////
+var presentHour = dayjs().format('hA')
+console.log(presentHour)
+
+// 9am section
+var calendarHour9 = $('#workHour9')
+if (calendarHour9.text() === presentHour) {
+  hour9.addClass('present')
+  hour10.addClass('future')
+  hour11.addClass('future')
+  hour12.addClass('future')
+  hour1.addClass('future')
+  hour2.addClass('future')
+  hour3.addClass('future')
+  hour4.addClass('future')
+  hour5.addClass('future')
+}
+else {
+ hour9.addClass('past')
+}
+
+// 10am section
+var calendarHour10 = $('#workHour10')
+if (calendarHour10.text() === presentHour) {
+  hour10.addClass('present')
+  hour11.addClass('future')
+  hour12.addClass('future')
+  hour1.addClass('future')
+  hour2.addClass('future')
+  hour3.addClass('future')
+  hour4.addClass('future')
+  hour5.addClass('future')
+}
+else {
+ hour10.addClass('past')
+}
+
+// 11am section
+var calendarHour11 = $('#workHour11')
+if (calendarHour11.text() === presentHour) {
+  hour11.addClass('present')
+  hour12.addClass('future')
+  hour1.addClass('future')
+  hour2.addClass('future')
+  hour3.addClass('future')
+  hour4.addClass('future')
+  hour5.addClass('future')
+}
+else {
+ hour11.addClass('past')
+}
+
+// 12am section
+var calendarHour12 = $('#workHour12')
+if (calendarHour12.text() === presentHour) {
+  hour12.addClass('present')
+  hour1.addClass('future')
+  hour2.addClass('future')
+  hour3.addClass('future')
+  hour4.addClass('future')
+  hour5.addClass('future')
+}
+else {
+ hour12.addClass('past')
+}
+
+// 1pm section
+var calendarHour1 = $('#workHour1')
+if (calendarHour1.text() === presentHour) {
+  hour1.addClass('present')
+  hour2.addClass('future')
+  hour3.addClass('future')
+  hour4.addClass('future')
+  hour5.addClass('future')
+}
+else {
+ hour1.addClass('past')
+}
+
+// 2pm section
+var calendarHour2 = $('#workHour2')
+if (calendarHour2.text() === presentHour) {
+  hour2.addClass('present')
+  hour3.addClass('future')
+  hour4.addClass('future')
+  hour5.addClass('future')
+}
+else {
+ hour2.addClass('past')
+}
+
+// 3pm section
+var calendarHour3 = $('#workHour3')
+if (calendarHour3.text() === presentHour) {
+  hour3.addClass('present')
+  hour4.addClass('future')
+  hour5.addClass('future')
+}
+else {
+ hour3.addClass('past')
+}
+
+// 4pm section 
+var calendarHour4 = $('#workHour4')
+if (calendarHour4.text() === presentHour) {
+  hour4.addClass('present')
+  hour5.addClass('future')
+}
+else {
+ hour4.addClass('past')
+}
+
+// 5pm section 
+var calendarHour5 = $('#workHour5')
+if (calendarHour5.text() === presentHour) {
+  hour5.addClass('present')
+}
+else {
+ hour5.addClass('past')
+}
