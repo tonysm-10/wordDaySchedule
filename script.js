@@ -1,36 +1,99 @@
-// Wrap all code that interacts with the DOM in a call to jQuery to ensure that
-// the code isn't run until the browser has finished rendering all the elements
-// in the html.
-$(function () {
-  // TODO: Add a listener for click events on the save button. This code should
-  // use the id in the containing time-block as a key to save the user input in
-  // local storage. HINT: What does `this` reference in the click listener
-  // function? How can DOM traversal be used to get the "hour-x" id of the
-  // time-block containing the button that was clicked? How might the id be
-  // useful when saving the description in local storage?
-  //
-  // TODO: Add code to apply the past, present, or future class to each time
-  // block by comparing the id to the current hour. HINTS: How can the id
-  // attribute of each time-block be used to conditionally add or remove the
-  // past, present, and future classes? How can Day.js be used to get the
-  // current hour in 24-hour time?
-  //
-  // TODO: Add code to get any user input that was saved in localStorage and set
-  // the values of the corresponding textarea elements. HINT: How can the id
-  // attribute of each time-block be used to do this?
-  //
-  // TODO: Add code to display the current date in the header of the page.
+
+
+$(document).ready(function() {
+  var myTextArea1 = $('#textarea1');
+  var myTextArea2 = $('#textarea2');
+  var myTextArea3 = $('#textarea3');
+  var myTextArea4 = $('#textarea4');
+  var myTextArea5 = $('#textarea5');
+  var myTextArea6 = $('#textarea6');
+  var myTextArea7 = $('#textarea7');
+  var myTextArea8 = $('#textarea8');
+  var myTextArea9 = $('#textarea9');
+  
+  var saveBtn1 = $('#saveBtn1');
+  var saveBtn2 = $('#saveBtn2');
+  var saveBtn3 = $('#saveBtn3');
+  var saveBtn4 = $('#saveBtn4');
+  var saveBtn5 = $('#saveBtn5');
+  var saveBtn6 = $('#saveBtn6');
+  var saveBtn7 = $('#saveBtn7');
+  var saveBtn8 = $('#saveBtn8');
+  var saveBtn9 = $('#saveBtn9');
+
+
+
+  // Retrieve saved value from local storage on page load
+  if (localStorage.getItem('textAreaValue1')) {
+    myTextArea1.val(localStorage.getItem('textAreaValue1'));
+  }
+  if (localStorage.getItem('textAreaValue2')) {
+    myTextArea2.val(localStorage.getItem('textAreaValue2'));
+  }
+  if (localStorage.getItem('textAreaValue3')) {
+    myTextArea3.val(localStorage.getItem('textAreaValue3'));
+  }
+  if (localStorage.getItem('textAreaValue4')) {
+    myTextArea4.val(localStorage.getItem('textAreaValue4'));
+  }
+  if (localStorage.getItem('textAreaValue5')) {
+    myTextArea5.val(localStorage.getItem('textAreaValue5'));
+  }
+  if (localStorage.getItem('textAreaValue6')) {
+    myTextArea6.val(localStorage.getItem('textAreaValue6'));
+  }
+  if (localStorage.getItem('textAreaValue7')) {
+    myTextArea7.val(localStorage.getItem('textAreaValue7'));
+  }
+  if (localStorage.getItem('textAreaValue8')) {
+    myTextArea8.val(localStorage.getItem('textAreaValue8'));
+  }
+  if (localStorage.getItem('textAreaValue9')) {
+    myTextArea9.val(localStorage.getItem('textAreaValue9'));
+  }
+
+  // Save text area value to local storage on button click
+  saveBtn1.on('click', function() {
+    localStorage.setItem('textAreaValue1', myTextArea1.val());
+    alert('Text area 1 value saved!');
+  });
+  saveBtn2.on('click', function() {
+    localStorage.setItem('textAreaValue2', myTextArea2.val());
+    alert('Text area 2 value saved!');
+  });
+  saveBtn3.on('click', function() {
+    localStorage.setItem('textAreaValue3', myTextArea3.val());
+    alert('Text area 3 value saved!');
+  });
+  saveBtn4.on('click', function() {
+    localStorage.setItem('textAreaValue4', myTextArea4.val());
+    alert('Text area 4 value Saved!')
+  });
+  saveBtn5.on('click', function() {
+    localStorage.setItem('textAreaValue5', myTextArea5.val());
+    alert('Text area 5 value Saved!')
+  });
+  saveBtn6.on('click', function() {
+    localStorage.setItem('textAreaValue6', myTextArea6.val());
+    alert('Text area 6 value Saved!')
+  });
+  saveBtn7.on('click', function() {
+    localStorage.setItem('textAreaValue7', myTextArea7.val());
+    alert('Text area 7 value Saved!')
+  });
+  saveBtn8.on('click', function() {
+    localStorage.setItem('textAreaValue8', myTextArea8.val());
+    alert('Text area 8 value Saved!')
+  });
+  saveBtn9.on('click', function() {
+    localStorage.setItem('textAreaValue9', myTextArea9.val());
+    alert('Text area 9 value Saved!')
+  });
+
 });
 
 
 
-
-
-
-
-var myTextArea = $('#textarea')
-
-var saveBtn = $('.saveBtn')
 
 
 
